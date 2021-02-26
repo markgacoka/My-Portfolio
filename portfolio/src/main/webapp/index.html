@@ -1,22 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"></html>
   <head>
     <meta charset="UTF-8">
-    <title>Mark Gacoka's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Mark CS major portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="script.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        flex();
-      }, false);
-      </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+
+    <title>Mark Gacoka's Portfolio</title>
   </head>
   <body>
-    <div>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects I've worked on</a>
-      <a href="#images">Images</a>
-    </div>
+    <header class="header" role="banner" id="top">
+      <div class="row">
+        <nav class="nav" role="navigation">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item">
+              <a href="#images" class="nav__link">Images</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__text-box row">
+        <div class="header__text">
+          <h1 class="heading-primary">
+            <span>Mark Gacoka</span>
+          </h1>
+          <!-- Put a small paragraph about yourself -->
+          <p>CS Student at Minerva Schools at KGI</p>
+          <a href="#projects" class="btn btn--pink">See my projects</a>
+        </div>
+      </div>
+    </header>
 
   <main role="main">
     <section class="about" id="about">
@@ -34,21 +52,22 @@
               lot of wildlife and beautiful scenaries but also functions as a tech hub. 
               My hobbies include swimming and playing chess online against robots 
               (the singularity has entered the chat :)
-              </p>>
+              </p>
               <p>
                 One thing that makes me unique is my love for learning and my curiosity 
                 to discover things most people don't think of uncovering i.e. the meaning 
                 of life, emerging topics in the physical sciences and paradoxes.
-                </p>>
+                </p>
             <a href="https://markgacoka.com/assets/resume.pdf" class="btn">My Resume</a>
           </div>
 
           <div class="about__photo-container">
-            <img class="about__photo" src="" alt="Profile pic" />
+            <img class="about__photo" src="img/fav_pic.jpg" alt="Profile pic" />
           </div>
         </div>
       </div>
     </section>
+  </main>
 
     <section class="work" id="projects">
       <div class="row">
@@ -99,7 +118,7 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./img/graph.png" class="work__image" alt="Data Analysis" />
+              <img src="./img/graph.png" class="work__image" alt="Data Analysis" style="width: 700px; height: 700px;" />
             </div>
           </div>
 
@@ -129,44 +148,34 @@
           </div>
         </div>
       </div>
+      <div class="row" id="images">
+        <h3>Favorite Images</h3>
+      <div class="column">
+        
+        <img src="img/basketball.jpg" class="work__image" alt="Basketball" style="width: 300px; height: 300px;" />
+      </div>
+      <div class="column">
+        <img src="img/meme_face.jpg" class="work__image" alt="Meme face" style="width: 300px; height: 300px;"/>
+      </div>
+      <div class="column">
+        
+        <img src="img/snack.jpg" class="work__image" alt="Favorite Snack Spot" style="width: 300px; height: 300px;" />
+      </div>
+      </div>
     </section>
-    </main>>
-
-
-    <h2>Favorite Images</h2>
-    <div class="row" id="images">
-      <div class="column">
-        <a href="img/basketball.jpg">
-        <img src="img/basketball.jpg" alt="Basketball photo", style="width:100%">
-        <h2>My love for basketball</h2>
-        <h3>#hoopdreams</h3>
-      </a>
-      </div>
-      <div class="column">
-        <a href="img/meme_face">
-        <img src="img/meme_face.jpg" alt="Meme face", style="width:100%">
-        <h2>Meme face</h2>
-        <h3>#selfie</h3>
-      </a>
-      </div>
-      <div class="column">
-        <a href="img/snack.jpg">
-        <img src="img/snack.jpg" alt="Favorite snack spot", style="width:100%">
-        <h2>Favorite snack spot</h2>
-        <h3>#foodie</h3>
-      </a>
-      </div>
-    </div>      
-    <footer id="colophon" class="site-footer" role="contentinfo">
-      <div class="social-wrapper">
-        <ul>
-          <li>
-            <a href="https://github.com/markgacoka" target="_blank">
-              <img src="http://pngimg.com/uploads/github/github_PNG40.png" alt="Github Logo" class="github-icon"></a>
+    
+    <footer role="contentinfo" class="footer">
+      <div>
+        <ul class="footer__social-links">
+          <li class="footer__social-link-item">
+            <a href="https://github.com/markgacoka" title="Link to Github Profile">
+              <img src="./img/github.svg" class="footer__social-image" alt="Github">
+            </a>
           </li>
-          <li>
-            <a href="https://www.linkedin.com/in/gacokambui/" target="_blank">
-              <img src="https://icons-for-free.com/iconfiles/png/512/linkedin+logo+logo+website+icon-1320190502911715717.png" alt="LinkedIn Logo" class="linkedin-icon"></a>
+          <li class="footer__social-link-item">
+            <a href="https://www.linkedin.com/in/gacokambui/">
+              <img src="./img/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+            </a>
           </li>
         </ul>
       </div>
