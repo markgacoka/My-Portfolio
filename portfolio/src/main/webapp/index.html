@@ -13,18 +13,44 @@
   </head>
   <body>
     <div>
-      <a class="active" href="#mark">Who is Mark?</a>
       <a href="#about">About Me</a>
       <a href="#projects">Projects I've worked on</a>
       <a href="#images">Images</a>
     </div>
-    <div>
-      <p>Hi! My name is Mark Gacoka. I am a sophomore at Minerva Schools at KGI which is based in San Francisco, CA. I am also a CS major minoring in Business and planning to concentrate in Data Science.</p>
-      <p>I was born in a fast paced city called Nairobi in Kenya where there is a lot of wildlife and beautiful scenaries but also functions as a tech hub. My hobbies include swimming and playing chess online against robots (the singularity has entered the chat :)</p>
-      <p>One thing that makes me unique is my love for learning and my curiosity to discover things most people don't think of uncovering i.e. the meaning of life, emerging topics in the physical sciences and paradoxes.</p>
-    </div>
 
-    <section class="work" id="work">
+  <main role="main">
+    <section class="about" id="about">
+      <div class="row">
+        <h2>About Me</h2>
+        <div class="about__content">
+          <div class="about__text">
+            <p>
+              Hi! My name is Mark Gacoka. I am a sophomore at Minerva Schools at KGI 
+              which is based in San Francisco, CA. I am also a CS major minoring in 
+              Business and planning to concentrate in Data Science.
+            </p>
+            <p>
+              I was born in a fast paced city called Nairobi in Kenya where there is a 
+              lot of wildlife and beautiful scenaries but also functions as a tech hub. 
+              My hobbies include swimming and playing chess online against robots 
+              (the singularity has entered the chat :)
+              </p>>
+              <p>
+                One thing that makes me unique is my love for learning and my curiosity 
+                to discover things most people don't think of uncovering i.e. the meaning 
+                of life, emerging topics in the physical sciences and paradoxes.
+                </p>>
+            <a href="https://markgacoka.com/assets/resume.pdf" class="btn">My Resume</a>
+          </div>
+
+          <div class="about__photo-container">
+            <img class="about__photo" src="" alt="Profile pic" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="projects">
       <div class="row">
         <h2>My Projects</h2>
         <div class="work__boxes">
@@ -83,11 +109,13 @@
               <p>
                 An optimized shortest path algorithm that navigates to the quickest safe route for people to navigate on when on new territory.
               </p>
+              <nav>
               <ul class="work__list">
                 <li>Python</li>
                 <li>Optimization algorithms</li>
                 <li>Matplotlib</li>
               </ul>
+              </nav>
 
               <div class="work__links">
                 <a href="https://github.com/markgacoka/TSP_Optimization" class="link__text">
@@ -102,10 +130,11 @@
         </div>
       </div>
     </section>
+    </main>>
 
 
     <h2>Favorite Images</h2>
-    <div class="row">
+    <div class="row" id="images">
       <div class="column">
         <a href="img/basketball.jpg">
         <img src="img/basketball.jpg" alt="Basketball photo", style="width:100%">
@@ -114,9 +143,9 @@
       </a>
       </div>
       <div class="column">
-        <a href="img/fav_pic.jpg">
-        <img src="img/fav_pic.jpg" alt="Favorite selfie", style="width:100%">
-        <h2>Favorite selfie</h2>
+        <a href="img/meme_face">
+        <img src="img/meme_face.jpg" alt="Meme face", style="width:100%">
+        <h2>Meme face</h2>
         <h3>#selfie</h3>
       </a>
       </div>

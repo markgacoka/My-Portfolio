@@ -1,3 +1,15 @@
+/* SETUP */
+
+body {
+  font-size: var(--font-size-small);
+  font-family: var(--font-stack);
+  font-weight: 400;
+  color: var(--white-1);
+  line-height: var(--line-height-normal);
+  background: var(--black);
+  overflow-x: hidden;
+}
+
 .column {
   float: left;
   width: 33.33%;
@@ -8,6 +20,16 @@
   content: "";
   clear: both;
   display: table;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+  .center-inner{left:25%;top:25%;position:absolute;width:50%;height:300px;background:#f0f;text-align:center;max-width:500px;max-height:500px;}
+}
+@media (min-width: 1000px) {
+  .center{left:50%;top:25%;position:absolute;}
+  .center-inner{width:500px;height:100%;margin-left:-250px;height:300px;background:#f0f;text-align:center;max-width:500px;max-height:500px;}
 }
 
 @media screen and (max-width: 800px) {
@@ -23,6 +45,37 @@
     max-width: 100%;
   }
 }
+
+/* ABOUT ME SECTION */
+.about__content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+@media(max-width: 900px) {
+  .about__content {
+      flex-direction: column-reverse;
+      align-items: initial;
+  }
+}
+
+.about__photo-container {
+  margin-bottom: var(--gutter-normal);
+}
+
+@media(min-width: 901px) {
+  .about__text {
+      flex: 0 0 35%;
+  }
+  
+  .about__photo-container {
+      flex: 1;
+      margin: 0 var(--gutter-huge) 0 0;
+  }
+}
+
+/* PROJECT SECTION */
 
 .work__box {
   display: flex;
@@ -88,6 +141,8 @@
       height: 4rem;
   }
 }
+
+/* FOOTER SECTION */
 
 .site-footer {
   background-color: #838383;
