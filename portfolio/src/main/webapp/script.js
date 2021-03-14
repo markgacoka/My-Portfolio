@@ -4,6 +4,8 @@ async function showDetails() {
   
     const personalListElement = document.getElementById('details-list');
   personalListElement.innerHTML = '';
+  
+  console.log(jsonFromResponse.firstName);
 
   personalListElement.appendChild(
       createListElement('First Name: ' + jsonFromResponse.firstName));

@@ -37,7 +37,7 @@ public class PersonalDetailsServlet extends HttpServlet {
     json += personalDetails.getCurrentAge();
     json += ", ";
     json += "\"schoolYear\": ";
-    json += personalDetails.getSchoolYear();
+    json += "\"" + personalDetails.getSchoolYear() + "\"";
     json += "}";
     return json;
   }
