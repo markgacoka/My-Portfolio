@@ -1,0 +1,9 @@
+//Show 'About Me' title by fetching from Javascript
+
+async function showName() {
+  const responseFromServer = await fetch('/name');
+  const textFromResponse = await responseFromServer.text();
+
+  const nameTitle = document.getElementById('name-title');
+  nameTitle.innerText = textFromResponse;
+}
