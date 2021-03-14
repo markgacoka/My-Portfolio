@@ -22,15 +22,4 @@ public class FormHandlerServlet extends HttpServlet {
     response.getWriter().println("You submitted: " + replyValue);
     response.sendRedirect("/");
   }
-  
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String nameValue = request.getParameter("fname");
-    String replyValue = request.getParameter("reply");
-    System.out.println("Form from: " + nameValue);
-    System.out.println("You submitted: " + replyValue);
-    
-    response.setContentType("text/html;");
-    response.getWriter().println("You submitted: " + nameValue);
-    response.getWriter().println("You submitted: " + replyValue);
-  }
 }
