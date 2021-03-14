@@ -161,6 +161,15 @@
         <img src="img/snack.jpg" class="work__image" alt="Favorite Snack Spot" style="width: 300px; height: 300px;" />
       </div>
       </div>
+      <div class="row">
+        <h3>Look up a random fact about me:</h3>
+        <div class="column">
+	  <ul id="details-list"></ul>
+	</div>
+	<div class="column">
+	  <button onclick="showDetails();">Random Fact</button>
+	</div>	
+      </div>
     </section>
     
     <footer role="contentinfo" class="footer">
@@ -176,12 +185,13 @@
               <img src="./img/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
             </a>
           </li>
+<li class="footer__social-link-item">
             <a href="/details" onclick="showDetails(); return false;">
+            <a target="_blank" href="/details">
               <img src="./img/name.png" title="My Personal Details" class="footer__social-image" alt="Name">
             </a>
           </li>
         </ul>
-        <ul id="details-list"></ul>
         </ul>
       </div>
     </footer>

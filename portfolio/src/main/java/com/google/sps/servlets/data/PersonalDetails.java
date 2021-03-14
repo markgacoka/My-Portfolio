@@ -1,19 +1,18 @@
 package com.google.sps.data;
-
-import java.util.Date;
+import java.util.Random;
 
 public final class PersonalDetails {
 
   private final String firstName;
   private final String lastName;
   private final int currentAge;
-  private final String schoolYear;
+  private final String[] randomFacts;
 
-  public PersonalDetails(String firstName, String lastName, int currentAge, String schoolYear) {
+  public PersonalDetails(String firstName, String lastName, int currentAge, String[] randomFacts) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.currentAge = currentAge;
-    this.schoolYear = schoolYear;
+    this.randomFacts = randomFacts;
   }
 
   public String getFirstName() {
@@ -28,7 +27,9 @@ public final class PersonalDetails {
     return currentAge;
   }
 
-  public String getSchoolYear() {
-    return schoolYear;
+  public String getRandomFact() {
+    int idx = new Random().nextInt(randomFacts.length);
+    String randomFact = (randomFacts[idx]);
+    return randomFact;
   }
 }
