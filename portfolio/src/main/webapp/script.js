@@ -1,9 +1,24 @@
-//Show 'About Me' title by fetching from Javascript
+async function showDetails() {
+  const responseFromServer = await fetch('/details');
+  const jsonFromResponse = await responseFromServer.json();
+  
+    const personalListElement = document.getElementById('details-list');
+  personalListElement.innerHTML = '';
 
-async function showName() {
-  const responseFromServer = await fetch('/name');
-  const textFromResponse = await responseFromServer.text();
-
-  const nameTitle = document.getElementById('name-title');
-  nameTitle.innerText = textFromResponse;
+  personalListElement.appendChild(
+      createListElement('First Name: ' + jsonFromResponse.firstName));
+  personalListElement.appendChild(
+      createListElement('Last Name: ' + jsonFromResponse.lastName));
+  personalListElement.appendChild(
+      createListElement('Age: ' + jsonFromResponse.currentAge));
+  personalListElement.appendChild(
+      createListElement('School Year: ' + jsonFromResponse.schoolYear));
 }
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+
