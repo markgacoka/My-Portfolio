@@ -16,9 +16,9 @@ public class PersonalDetailsServlet extends HttpServlet {
     String firstName = "Mark";
     String lastName = "Gacoka";
     int currentAge = 20;
-    String schoolYear = "Sophomore";
+    String[] randomFacts = {"I am 5'9\"", "I was born in Kenya", "I have had multiple near death experience", "I can type upto 170 wpm"};
 
-    PersonalDetails personalDetails = new PersonalDetails(firstName, lastName, currentAge, schoolYear);
+    PersonalDetails personalDetails = new PersonalDetails(firstName, lastName, currentAge, randomFacts);
     String json = convertToJson(personalDetails);
 
     response.setContentType("application/json;");
@@ -36,8 +36,8 @@ public class PersonalDetailsServlet extends HttpServlet {
     json += "\"currentAge\": ";
     json += personalDetails.getCurrentAge();
     json += ", ";
-    json += "\"schoolYear\": ";
-    json += personalDetails.getSchoolYear();
+    json += "\"randomFact\": ";
+    json += "\"" + personalDetails.getRandomFact() + "\"";
     json += "}";
     return json;
   }
