@@ -170,6 +170,22 @@
 	  <a href="javascript:showDetails()" class="btn">Random Fact</a>
 	</div>	
       </div>
+      <div class="row">
+      	<h2>Share with me your SPS experience</h2>
+      	<h3>I'd love to hear from you</h3>
+      	<div class="column">
+      	  <form action="/form-handler" method="POST">
+	    <label for="fname">Name:</label><br>
+	    <textarea cols="40" rows="10" name="fname" style="color: #FFFFFF;  width: 800px; height:200px; background: transparent; border: 1px solid #ff3258; font-size: 25px;"></textarea><br>
+	    <label for="reply">Response:</label><br>
+	    <textarea cols="40" rows="10" name="reply" style="color: #FFFFFF; width: 800px; height:200px; background: transparent; border: 1px solid #ff3258; font-size: 25px;"></textarea><br>
+	    <input type="submit" onclick="showResponses()" value="Submit" style="color: #FFFFFF; background: transparent; width: 150px; height:50px; border: 1px solid #ff3258; font-weight: 400; text-decoration: none;"/>
+	  </form>
+	  <div class="column">
+	  <p id="responses-container"></p>
+	  </div>
+      	</div>
+      </div>
     </section>
     
     <footer role="contentinfo" class="footer">
@@ -186,7 +202,6 @@
             </a>
           </li>
 <li class="footer__social-link-item">
-            <a href="/details" onclick="showDetails(); return false;">
             <a target="_blank" href="/details">
               <img src="./img/name.png" title="My Personal Details" class="footer__social-image" alt="Name">
             </a>

@@ -16,7 +16,7 @@ public class PersonalDetailsServlet extends HttpServlet {
     String firstName = "Mark";
     String lastName = "Gacoka";
     int currentAge = 20;
-    String[] randomFacts = {"I am 5'9\"", "I was born in Kenya", "I have had multiple near death experience", "I can type upto 170 wpm"};
+    String[] randomFacts = {"I am 5'9\"", "I was born in Kenya", "I have had multiple near death experiences", "I can type upto 170 wpm"};
 
     PersonalDetails personalDetails = new PersonalDetails(firstName, lastName, currentAge, randomFacts);
     String json = convertToJson(personalDetails);
